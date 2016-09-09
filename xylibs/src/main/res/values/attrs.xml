@@ -1,0 +1,8 @@
+<resources>
+
+    <declare-styleable name="CircleLoadingView">
+        <attr name="circleColor" format="color"/>
+        <attr name="circleRadius" format="dimension"></attr>
+    </declare-styleable>
+
+</resources>

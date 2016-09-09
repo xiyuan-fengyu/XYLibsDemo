@@ -1,0 +1,14 @@
+<resources>
+
+    <!--text font size begin-->
+    <dimen name="text_smallest">8sp</dimen>
+    <dimen name="text_smaller">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_big">16sp</dimen>
+    <dimen name="text_bigger">18sp</dimen>
+    <dimen name="text_biggest">20sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--text font size end-->
+
+</resources>
