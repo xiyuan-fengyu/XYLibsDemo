@@ -30,7 +30,10 @@
             android:label="@string/title_activity_http" />
         <activity
             android:name=".activity.LoadingAnimActivity"
-            android:label="@string/title_activity_loading_anim"></activity>
+            android:label="@string/title_activity_loading_anim" />
+        <activity
+            android:name=".activity.PreferenceActivity"
+            android:label="@string/title_activity_preference"></activity>
     </application>
 
 </manifest>

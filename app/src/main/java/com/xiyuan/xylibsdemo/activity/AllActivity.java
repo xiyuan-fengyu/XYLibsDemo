@@ -54,6 +54,7 @@ public class AllActivity extends Activity implements View.OnClickListener{
         allDatas.add(new DemoItem("利用fresco的SimpleDraweeView加载图片", ImgLoadActivity.class, 6));
         allDatas.add(new DemoItem("利用volley请求服务器API", HttpActivity.class, 8));
         allDatas.add(new DemoItem("loading加载动画", LoadingAnimActivity.class, 4));
+        allDatas.add(new DemoItem("SharedPreference工具类的使用", PreferenceActivity.class, 3));
 
         allAdapter = new AllAdapter(allDatas);
         allRv.setLayoutManager(new LinearLayoutManager(this));
