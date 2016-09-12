@@ -14,6 +14,7 @@ import com.xiyuan.http.HttpBean;
 import com.xiyuan.image.ImgLoader;
 import com.xiyuan.util.PermissionUtil;
 import com.xiyuan.util.PreferenceUtil;
+import com.xiyuan.util.SignatureUtil;
 import com.xiyuan.util.XYLog;
 import com.xiyuan.view.CircleLoadingView;
 import com.xiyuan.xylibsdemo.R;
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
         PreferenceUtil.put("just_test_key", "just_test_value");
         Toast.makeText(this, PreferenceUtil.getString("just_test_key", ""), Toast.LENGTH_LONG).show();
+
+        XYLog.d("应用签名MD5为：", SignatureUtil.get(this, SignatureUtil.MD5));
+        XYLog.d("应用签名SHA1为：", SignatureUtil.get(this, SignatureUtil.SHA1));
     }
 
     @Override
