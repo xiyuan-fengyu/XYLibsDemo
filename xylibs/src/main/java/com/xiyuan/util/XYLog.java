@@ -36,7 +36,7 @@ public class XYLog {
         Log.e(LOG_TAG, argsToString(objs));
     }
 
-    private static String argsToString(Object ...objs) {
+    public static String argsToString(Object ...objs) {
         StringBuilder buffer = new StringBuilder();
         if (objs != null && objs.length > 0) {
             for (Object obj: objs) {

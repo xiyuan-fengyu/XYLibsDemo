@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xiyuan.xylibsdemo.activity.LoadingAnimActivity">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/centerV"
+        android:layout_centerInParent="true" />
+
+    <com.xiyuan.view.CircleLoadingView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/loading"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/startTV"
+        android:layout_marginTop="100dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/green"
+        android:layout_toLeftOf="@+id/centerV"
+        android:layout_below="@+id/centerV"
+        android:clickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/stopTV"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/accent"
+        android:layout_below="@+id/centerV"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@+id/centerV"
+        android:clickable="false" />
+</RelativeLayout>

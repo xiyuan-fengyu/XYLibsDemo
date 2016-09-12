@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xiyuan.xylibsdemo.activity.XYLogActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="演示XYLog日志打印,包括基本类型，数组，可迭代对象，普通对象的打印"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:padding="12dp" />
+
+</RelativeLayout>

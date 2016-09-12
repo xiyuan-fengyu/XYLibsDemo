@@ -9,13 +9,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.AllActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.XYLogActivity"
+            android:label="@string/title_activity_xylog" />
+        <activity
+            android:name=".activity.PermissionActivity"
+            android:label="@string/title_activity_permission" />
+        <activity
+            android:name=".activity.ImgLoadActivity"
+            android:label="@string/title_activity_img_load" />
+        <activity
+            android:name=".activity.HttpActivity"
+            android:label="@string/title_activity_http" />
+        <activity
+            android:name=".activity.LoadingAnimActivity"
+            android:label="@string/title_activity_loading_anim"></activity>
     </application>
 
 </manifest>

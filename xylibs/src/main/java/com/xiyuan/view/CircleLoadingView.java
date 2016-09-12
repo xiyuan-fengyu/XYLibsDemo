@@ -141,9 +141,11 @@ public class CircleLoadingView extends View implements Animation.AnimationListen
                     showAnimation.setAnimationListener(this);
                 }
 
+                setVisibility(VISIBLE);
                 startAnimation(showAnimation);
             }
             else {
+                isVisible = true;
                 setVisibility(VISIBLE);
             }
         }
@@ -166,6 +168,7 @@ public class CircleLoadingView extends View implements Animation.AnimationListen
                 startAnimation(hideAnimation);
             }
             else {
+                isVisible = false;
                 setVisibility(GONE);
             }
         }
@@ -173,9 +176,6 @@ public class CircleLoadingView extends View implements Animation.AnimationListen
 
     @Override
     public void onAnimationStart(Animation animation) {
-        if (animation == showAnimation) {
-            setVisibility(VISIBLE);
-        }
     }
 
     @Override
