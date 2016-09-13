@@ -13,6 +13,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.JsonObject;
+import com.xiyuan.util.XYLog;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -84,7 +85,7 @@ public class HttpBean implements IHttpBean {
                 @Override
                 public void onResponse(JsonObject jsonObject) {
                     try {
-                        Log.e("xiyuan", HttpBean.this.url + "      " + jsonObject.toString());
+                        XYLog.d(HttpBean.this.url, "\n", jsonObject);
                         HttpBean.this.onResponseSuccess(jsonObject);
                     }
                     catch(Exception e)
@@ -133,7 +134,7 @@ public class HttpBean implements IHttpBean {
                     return request.getTag().toString().equals(tag);
                 }
             });
-            Log.d(HttpBean.class.getSimpleName(), tag + " http request queue removed");
+            XYLog.d(HttpBean.class.getSimpleName(), tag + " http request queue removed");
         }
     }
 
