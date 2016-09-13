@@ -50,6 +50,10 @@ public class DownloadUtil {
         downloadService.newDownload(url);
     }
 
+    public void newDownload(DownloadService.Download download) {
+        downloadService.newDownload(download);
+    }
+
     public void destory() {
         if(downloadService != null)
         {
