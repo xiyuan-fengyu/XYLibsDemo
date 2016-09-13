@@ -9,4 +9,5 @@
     <string name="title_activity_preference">PreferenceActivity</string>
     <string name="title_activity_signature">SignatureActivity</string>
     <string name="title_activity_update">UpdateActivity</string>
+    <string name="title_activity_dialog">DialogActivity</string>
 </resources>

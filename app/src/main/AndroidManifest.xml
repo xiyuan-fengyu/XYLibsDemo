@@ -39,7 +39,10 @@
             android:label="@string/title_activity_signature" />
         <activity
             android:name=".activity.UpdateActivity"
-            android:label="@string/title_activity_update"></activity>
+            android:label="@string/title_activity_update" />
+        <activity
+            android:name=".activity.DialogActivity"
+            android:label="@string/title_activity_dialog"></activity>
     </application>
 
 </manifest>
