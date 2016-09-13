@@ -57,6 +57,7 @@ public class AllActivity extends Activity implements View.OnClickListener{
         allDatas.add(new DemoItem("loading加载动画", LoadingAnimActivity.class, 4));
         allDatas.add(new DemoItem("SharedPreference工具类的使用", PreferenceActivity.class, 3));
         allDatas.add(new DemoItem("获取签名信息", SignatureActivity.class, 4));
+        allDatas.add(new DemoItem("全量更新，安装包的下载和安装", UpdateActivity.class, 7));
 
         allAdapter = new AllAdapter(allDatas);
         allRv.setLayoutManager(new LinearLayoutManager(this));

@@ -8,4 +8,5 @@
     <string name="title_activity_loading_anim">LoadingAnimActivity</string>
     <string name="title_activity_preference">PreferenceActivity</string>
     <string name="title_activity_signature">SignatureActivity</string>
+    <string name="title_activity_update">UpdateActivity</string>
 </resources>

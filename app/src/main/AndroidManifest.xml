@@ -36,7 +36,10 @@
             android:label="@string/title_activity_preference" />
         <activity
             android:name=".activity.SignatureActivity"
-            android:label="@string/title_activity_signature"></activity>
+            android:label="@string/title_activity_signature" />
+        <activity
+            android:name=".activity.UpdateActivity"
+            android:label="@string/title_activity_update"></activity>
     </application>
 
 </manifest>
