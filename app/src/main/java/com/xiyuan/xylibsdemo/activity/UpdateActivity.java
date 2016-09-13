@@ -57,7 +57,9 @@ public class UpdateActivity extends Activity implements DownloadReceiver.OnRecei
 
     @Override
     protected void onDestroy() {
-        downloadUtil.destory();
+        if (downloadUtil != null) {
+            downloadUtil.destory();
+        }
         super.onDestroy();
     }
 }
