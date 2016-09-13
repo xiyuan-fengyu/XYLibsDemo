@@ -20,7 +20,7 @@ public class DownloadService extends Service {
 
     public boolean isServiceRunning = true;
 
-    private List<String> downloadQueen = new ArrayList<>();
+    private List<Object> downloadQueen = new ArrayList<>();
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -39,6 +39,14 @@ public class DownloadService extends Service {
         }
     }
 
+    public void newDownload(Download download)
+    {
+        if(isServiceRunning)
+        {
+            downloadQueen.add(download);
+        }
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -51,7 +59,19 @@ public class DownloadService extends Service {
                     int size = downloadQueen.size();
                     if(size > 0)
                     {
-                        String url = downloadQueen.remove(size - 1);
+                        Object downloadTask = downloadQueen.remove(size - 1);
+                        String url = null;
+                        String saveDir = null;
+                        if (downloadTask instanceof Download) {
+                            Download download = (Download) downloadTask;
+                            url = download.url;
+                            saveDir = download.saveDir;
+                        }
+                        else {
+                            url = (String) downloadTask;
+                            saveDir = "/";
+                        }
+
                         Uri resource = Uri.parse(url);
                         DownloadManager.Request request = new DownloadManager.Request(resource);
                         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
@@ -64,7 +84,7 @@ public class DownloadService extends Service {
 
                         String[] strs = url.split("/");
                         String fileName = strs[strs.length - 1];
-                        request.setDestinationInExternalPublicDir("/", fileName);
+                        request.setDestinationInExternalPublicDir(saveDir, fileName);
                         request.setTitle(fileName);
 
                         DownloadManager downloadManager = (DownloadManager)getSystemService(DOWNLOAD_SERVICE);
@@ -99,6 +119,15 @@ public class DownloadService extends Service {
         public DownloadService getService()
         {
             return  DownloadService.this;
+        }
+    }
+
+    public static class Download {
+        public final String url;
+        public final String saveDir;
+        public Download(String url, String saveDir) {
+            this.url = url;
+            this.saveDir = saveDir;
         }
     }
 
