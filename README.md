@@ -20,6 +20,6 @@ allprojects {
 ```gradle
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.xiyuan:xylibs:1.0.0'
+    compile 'com.xiyuan:xylibs:1.0.1'
 }
 ```
