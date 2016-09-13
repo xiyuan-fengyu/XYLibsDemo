@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.xiyuan.image.ImgLoader;
+import com.xiyuan.util.ActivityUtil;
 import com.xiyuan.util.XYLog;
 import com.xiyuan.xylibsdemo.R;
 import com.xiyuan.xylibsdemo.model.DemoItem;
@@ -55,6 +56,7 @@ public class AllActivity extends Activity implements View.OnClickListener{
         allDatas.add(new DemoItem("利用volley请求服务器API", HttpActivity.class, 8));
         allDatas.add(new DemoItem("loading加载动画", LoadingAnimActivity.class, 4));
         allDatas.add(new DemoItem("SharedPreference工具类的使用", PreferenceActivity.class, 3));
+        allDatas.add(new DemoItem("获取签名信息", SignatureActivity.class, 4));
 
         allAdapter = new AllAdapter(allDatas);
         allRv.setLayoutManager(new LinearLayoutManager(this));
@@ -66,7 +68,7 @@ public class AllActivity extends Activity implements View.OnClickListener{
         switch (v.getId()) {
             case R.id.demoItem: {
                 DemoItem item = (DemoItem) v.getTag(R.id.tag_obj);
-                startActivity(new Intent(AllActivity.this, item.activity));
+                ActivityUtil.startActivity(AllActivity.this, item.activity);
                 break;
             }
         }

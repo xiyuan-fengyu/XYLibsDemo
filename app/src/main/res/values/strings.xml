@@ -7,4 +7,5 @@
     <string name="title_activity_http">HttpActivity</string>
     <string name="title_activity_loading_anim">LoadingAnimActivity</string>
     <string name="title_activity_preference">PreferenceActivity</string>
+    <string name="title_activity_signature">SignatureActivity</string>
 </resources>
